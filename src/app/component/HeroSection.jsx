@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,15 +11,15 @@ export default function HeroSection() {
         setIsOpen(!isOpen)
     }
   return (
-    <div id="home">
-      <div className="bg-white">
-        <header className="absolute fixed inset-x-0 top-0 z-50 bg-[#ffffff73]">
+    <div id="home" className="mb-[5px]">
+      <div className="min-h-screen">
+        <header className=" fixed inset-x-0 top-0 z-50 bg-[#1a1a1a]">
           <nav
             className="flex items-center justify-center  p-6 lg:px-8  w-full"
             aria-label="Global"
           >
             <div className="flex lg:flex-1">
-              <Link href="#home" className="text-sm/6 font-semibold text-gray-900">
+              <Link href="#home" className="text-xl font-semibold text-[#c1cffb]">
                 Kerolos Nabil
               </Link>
             </div>
@@ -47,16 +48,19 @@ export default function HeroSection() {
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
-              <Link href="#home" className="text-sm/6 font-semibold text-gray-900">
+              <Link href="#home" className="text-l font-semibold text-[#c1cffb] hover:text-white">
                 Home
               </Link>
-              <Link href="#about" className="text-sm/6 font-semibold text-gray-900">
+              <Link href="#about" className="text-l font-semibold text-[#c1cffb] hover:text-white">
                 About
               </Link>
-              <Link href="#" className="text-sm/6 font-semibold text-gray-900">
+              <Link href="#projects" className="text-l font-semibold text-[#c1cffb] hover:text-white">
+                Projects
+              </Link>
+              <Link href="#education" className="text-l font-semibold text-[#c1cffb] hover:text-white">
                 Education
               </Link>
-              <Link href="#contact" className="text-sm/6 font-semibold text-gray-900">
+              <Link href="#contact" className="text-l font-semibold text-[#c1cffb] hover:text-white">
                 Contact
               </Link>
             </div>
@@ -73,14 +77,6 @@ export default function HeroSection() {
                 <div className="fixed inset-0 z-50"></div>
                 <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div className="flex items-center justify-between">
-                    {/* <Link href="#" className="-m-1.5 p-1.5">
-                    <span className="sr-only">Your Company</span>
-                    <img
-                        className="h-8 w-auto"
-                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                        alt=""
-                    />
-                    </Link> */}
                     <button
                     type="button"
                     className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -122,7 +118,14 @@ export default function HeroSection() {
                         About
                         </Link>
                         <Link
-                        href="#"
+                        href="#projects"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                        onClick={toggleMenu}
+                        >
+                        Projects
+                        </Link>
+                        <Link
+                        href="#education"
                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                         onClick={toggleMenu}
                         >
@@ -154,61 +157,40 @@ export default function HeroSection() {
           )}
         </header>
 
-        <div className="relative isolate px-6 pt-14 lg:px-8">
-          <div
-            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-              style={{clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"}}
-            ></div>
-          </div>
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relativ font-bold text-black">   
-                    <h1 className="text-2xl">Full-Stack Developer</h1>
+        <div className="relative isolate px-6 pt-24  lg:px-8">
+            <div className="w-full justify-center mt-12 mb-8">
+                <h1 className="text-6xl text-[#c1cffb] mx-auto text-center">Full-Stack Developer</h1>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 min-h-[calc(100vh-12rem)] md:min-h-[500px] gap-4 mt-6">
+                {/* left column */}
+                <div className="col-span-1 row-start-1 md:col-start-1 md:row-start-1">
+                    <p className="text-[#c1cffb]">
+                        Professional Full-Stack developer
+                    </p>
                 </div>
-              <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Announcing our next round of funding.{" "}
-                <Link href="#" className="font-semibold text-indigo-600">
-                  <span className="absolute inset-0" aria-hidden="true"></span>Read
-                  more <span aria-hidden="true">&rarr;</span>
-                </Link>
-              </div>
+                <div className="col-span-1 row-start-2 md:col-start-1  md:row-start-3 self-end mb-4"> 
+                    <p className="text-[#c1cffb] mb-4">
+                        As a junior full-stack developer, I specialize in building responsive and dynamic web applications 
+                        using HTML, CSS, JavaScript, React.js, Next.js, Python, Postgresql, and Django. 
+                        I’m passionate about clean code, user-focused design, and continuously learning new technologies to deliver impactful solutions.
+                    </p>
+                    <Link href={'https://github.com/kerolosNabil247'} className="m-5 bg-[#c1cffb] text-black p-3 hover:bg-[#1a1a1a] hover:text-[#c1cffb] border-2 border-transparent hover:border-[#c1cffb]">View Github</Link>
+                </div>
+                {/* right colums */}
+                <div className="relative col-span-1 md:col-start-2 min-h-[300px] md:row-span-full overflow-hidden rounded-lg">
+                    <Image 
+                        src="/me-git.jpg" 
+                        alt="personal photo" 
+                        layout="fill" // Or 'responsive', 'intrinsic', 'fixed'
+                        objectFit="cover" 
+                        className="rounded-lg " // Add any other Tailwind classes directly here
+                        priority // If it's a hero image, mark it as priority for LCP
+                    />
+                </div>
             </div>
-            <div className="text-center">
-              <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
-                Data to enrich your online business
-              </h1>
-              <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Link
-                  href="#"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get started
-                </Link>
-                <Link href="#" className="text-sm/6 font-semibold text-gray-900">
-                  Learn more <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div
-            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
-              style={{clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"}}
-            ></div>
-          </div>
         </div>
       </div>
+      
     </div>
   );
 }
