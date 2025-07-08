@@ -8,7 +8,7 @@ export default function About() {
         <hr className="my-28 col-span-1 md:col-span-2" />
         <div className="relative min-h-[300px] overflow-hidden rounded-lg col-span-1 md:col-start-1">
             <Image
-                src="/full-stack-web-development.jpg" 
+                src="/web-development.jpeg" 
                 alt="" 
                 layout="fill" // Or 'responsive', 'intrinsic', 'fixed'
                 objectFit="cover" 

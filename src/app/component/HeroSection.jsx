@@ -19,7 +19,7 @@ export default function HeroSection() {
             aria-label="Global"
           >
             <div className="flex lg:flex-1">
-              <Link href="#home" className="text-xl font-semibold text-[#c1cffb]">
+              <Link href="#home" className="text-2xl font-semibold text-[#c1cffb]">
                 Kerolos Nabil
               </Link>
             </div>
@@ -65,7 +65,7 @@ export default function HeroSection() {
               </Link>
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <Link href="#contact" className="text-sm/6 font-semibold rounded-md bg-indigo-600 px-3.5 py-2.5 text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <Link href="#contact" className="text-sm/6 bg-[#c1cffb] text-black p-3 hover:bg-[#1a1a1a] hover:text-[#c1cffb] border-2 border-transparent hover:border-[#c1cffb]">
                 Contact Me 
               </Link>
             </div>
@@ -163,13 +163,13 @@ export default function HeroSection() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 min-h-[calc(100vh-12rem)] md:min-h-[500px] gap-4 mt-6">
                 {/* left column */}
-                <div className="col-span-1 row-start-1 md:col-start-1 md:row-start-1">
-                    <p className="text-[#c1cffb]">
+                <div className="col-span-1 row-start-1 md:col-start-1 md:row-start-2">
+                    <p className="text-[#c1cffb] text-xl">
                         Professional Full-Stack developer
                     </p>
                 </div>
                 <div className="col-span-1 row-start-2 md:col-start-1  md:row-start-3 self-end mb-4"> 
-                    <p className="text-[#c1cffb] mb-4">
+                    <p className="text-[#c1cffb] text-l mb-4">
                         As a junior full-stack developer, I specialize in building responsive and dynamic web applications 
                         using HTML, CSS, JavaScript, React.js, Next.js, Python, Postgresql, and Django. 
                         I’m passionate about clean code, user-focused design, and continuously learning new technologies to deliver impactful solutions.
@@ -177,9 +177,9 @@ export default function HeroSection() {
                     <Link href={'https://github.com/kerolosNabil247'} className="m-5 bg-[#c1cffb] text-black p-3 hover:bg-[#1a1a1a] hover:text-[#c1cffb] border-2 border-transparent hover:border-[#c1cffb]">View Github</Link>
                 </div>
                 {/* right colums */}
-                <div className="relative col-span-1 md:col-start-2 min-h-[300px] md:row-span-full overflow-hidden rounded-lg">
+                <div className="relative col-span-1 md:col-start-2 min-h-[450px] md:min-h-[900px] md:row-span-full overflow-hidden rounded-lg">
                     <Image 
-                        src="/me-git.jpg" 
+                        src="/me.jpeg" 
                         alt="personal photo" 
                         layout="fill" // Or 'responsive', 'intrinsic', 'fixed'
                         objectFit="cover" 
