@@ -19,7 +19,7 @@ export default function HeroSection() {
             aria-label="Global"
           >
             <div className="flex lg:flex-1">
-              <Link href="#home" className="text-2xl font-semibold text-[#c1cffb]">
+              <Link href="#home" className="text-2xl font-semibold text-white">
                 Kerolos Nabil
               </Link>
             </div>
@@ -168,11 +168,13 @@ export default function HeroSection() {
                         Professional Full-Stack developer
                     </p>
                 </div>
-                <div className="col-span-1 row-start-2 md:col-start-1  md:row-start-3 self-end mb-4"> 
+                <div className="col-span-1 row-start-2 md:col-start-1  md:row-start-2 self-end mb-4"> 
                     <p className="text-[#c1cffb] text-l mb-4">
-                        As a junior full-stack developer, I specialize in building responsive and dynamic web applications 
-                        using HTML, CSS, JavaScript, React.js, Next.js, Python, Postgresql, and Django. 
-                        I’m passionate about clean code, user-focused design, and continuously learning new technologies to deliver impactful solutions.
+                        As a junior full-stack developer, I build responsive and dynamic web applications. 
+                        My expertise spans HTML, CSS, JavaScript, React.js, and Next.js for front-end development, 
+                        complemented by Python, Django, Flask, and PostgreSQL for robust back-end solutions. 
+                        I am committed to writing clean, maintainable code and crafting user-focused designs, 
+                        always seeking to integrate new technologies to deliver impactful solutions.
                     </p>
                     <Link href={'https://github.com/kerolosNabil247'} className="m-5 bg-[#c1cffb] text-black p-3 hover:bg-[#1a1a1a] hover:text-[#c1cffb] border-2 border-transparent hover:border-[#c1cffb]">View Github</Link>
                 </div>
@@ -183,7 +185,7 @@ export default function HeroSection() {
                         alt="personal photo" 
                         layout="fill" // Or 'responsive', 'intrinsic', 'fixed'
                         objectFit="cover" 
-                        className="rounded-lg " // Add any other Tailwind classes directly here
+                        // className="rounded-lg " // Add any other Tailwind classes directly here
                         priority // If it's a hero image, mark it as priority for LCP
                     />
                 </div>
