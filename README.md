@@ -27,7 +27,7 @@ This project is built using a robust stack of modern web technologies:
 ## 🌐 Live Demo
 
 You can view a live demo of the project here:
-[https://your-portfolio-project-live-url.com](https://your-portfolio-project-live-url.com) (Replace with your actual live demo URL)
+[https://portfolio-zdju.vercel.app/](https://portfolio-zdju.vercel.app/) 
 
 ## 📸 Screenshots
 
